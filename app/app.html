@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header Menu</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .transition-all {
+            transition: all 0.3s ease-in-out;
+        }
+
+        .max-h-0 {
+            max-height: 0;
+        }
+
+        .max-h-96 {
+            max-height: 24rem;
+        }
+
+        .rotate-180 {
+            transform: rotate(180deg);
+        }
+
+        .fade-enter-active,
+        .fade-leave-active {
+            transition: opacity 0.15s ease-in-out;
+        }
+
+        .fade-enter {
+            opacity: 0;
+        }
+
+        .fade-leave-to {
+            opacity: 0;
+        }
+
+        .tab-link::before {
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 2px;
+            width: 100%;
+            background-color: #1d4ed8;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .tab-link:hover::before {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        .tab-link.active::before {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        .hover-image-effect:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+
+<body>
+    <header class="bg-white border-b border-gray-200">
+        <div class="container mx-auto flex justify-between items-center p-4">
+            <a href="#" class="text-xl font-bold">Logo</a>
+            <nav>
+                <button id="dropdownButton" data-dropdown-toggle="megamenu" class="flex items-center text-gray-700 focus:outline-none">
+                    Menu
+                    <svg id="dropdownArrow" class="ml-2 w-4 h-4 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div id="megamenu" class="hidden fixed inset-0 max-h-0 transition-all overflow-hidden z-10 w-full bg-white shadow-lg">
+                    <div class="container mx-auto p-4">
+                        <!--<div class="grid grid-cols-5 gap-4 mb-4">
+                            <div>
+                                <h3 class="text-lg font-semibold mb-2">Column 1</h3>
+                                <ul class="space-y-2">
+                                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Item 1</a></li>
+                                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Item 2</a></li>
+                                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Item 3</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold mb-2">Column 2</h3>
+                                <ul class="space-y-2">
+                                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Item 4</a></li>
+                                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Item 5</a></li>
+                                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Item 6</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold mb-2">Column 3</h3>
+                                <ul class="space-y-2">
+                                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Item 7</a></li>
+                                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Item 8</a></li>
+                                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Item 9</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold mb-2">Column 4</h3>
+                                <ul class="space-y-2">
+                                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Item 10</a></li>
+                                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Item 11</a></li>
+                                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Item 12</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold mb-2">Column 5</h3>
+                                <ul class="space-y-2">
+                                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Item 13</a></li>
+                                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Item 14</a></li>
+                                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Item 15</a></li>
+                                </ul>
+                            </div>
+                        </div>-->
+                        <div class="tabs">
+                            <ul class="flex border-b mb-4 relative">
+                                <li class="mr-1 relative">
+                                    <a class="tab-link bg-white inline-block py-2 px-4 text-blue-500 hover:text-blue-800 font-semibold relative" href="#cars">Cars</a>
+                                </li>
+                                <li class="mr-1 relative">
+                                    <a class="tab-link bg-white inline-block py-2 px-4 text-blue-500 hover:text-blue-800 font-semibold relative" href="#pickups">Pickups</a>
+                                </li>
+                                <li class="mr-1 relative">
+                                    <a class="tab-link bg-white inline-block py-2 px-4 text-blue-500 hover:text-blue-800 font-semibold relative" href="#trucks">Trucks</a>
+                                </li>
+                            </ul>
+                            <div id="cars" class="tab-content hidden fade-enter-active">
+                                <div class="grid grid-cols-3 gap-4">
+                                    <div>
+                                        <h3 class="text-lg font-semibold mb-2">Cars Column 1</h3>
+                                        <ul class="space-y-2">
+                                            <li><a href="#" class="block"><img src="https://via.placeholder.com/200x100" class="transition-all w-auto hover-image-effect h-auto rounded-lg shadow-md" alt="Car 1"></a></li>
+                                            <li><a href="#" class="block hover-image-effect"><img src="https://via.placeholder.com/200x100" class="transition-all w-auto hover-image-effect h-auto rounded-lg shadow-md" alt="Car 2"></a></li>
+                                            <li><a href="#" class="block hover-image-effect"><img src="https://via.placeholder.com/200x100" class="transition-all w-auto hover-image-effect h-auto rounded-lg shadow-md" alt="Car 3"></a></li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-lg font-semibold mb-2">Cars Column 2</h3>
+                                        <ul class="space-y-2">
+                                            <li><a href="#" class="block hover-image-effect"><img src="https://via.placeholder.com/200x100" class="transition-all w-auto hover-image-effect h-auto rounded-lg shadow-md" alt="Car 4"></a></li>
+                                            <li><a href="#" class="block hover-image-effect"><img src="https://via.placeholder.com/200x100" class="transition-all w-auto hover-image-effect h-auto rounded-lg shadow-md" alt="Car 5"></a></li>
+                                            <li><a href="#" class="block hover-image-effect"><img src="https://via.placeholder.com/200x100" class="transition-all w-auto hover-image-effect h-auto rounded-lg shadow-md" alt="Car 6"></a></li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-lg font-semibold mb-2">Cars Column 3</h3>
+                                        <ul class="space-y-2">
+                                            <li><a href="#" class="block hover-image-effect"><img src="https://via.placeholder.com/200x100" class="transition-all w-auto hover-image-effect h-auto rounded-lg shadow-md" alt="Car 7"></a></li>
+                                            <li><a href="#" class="block hover-image-effect"><img src="https://via.placeholder.com/200x100" class="transition-all w-auto hover-image-effect h-auto rounded-lg shadow-md" alt="Car 8"></a></li>
+                                            <li><a href="#" class="block hover-image-effect"><img src="https://via.placeholder.com/200x100" class="transition-all w-auto hover-image-effect h-auto rounded-lg shadow-md" alt="Car 9"></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="pickups" class="tab-content hidden fade-enter-active">
+                                <div class="grid grid-cols-3 gap-4">
+                                    <div>
+                                        <h3 class="text-lg font-semibold mb-2">Pickups Column 1</h3>
+                                        <ul class="space-y-2">
+                                            <li><a href="#" class="block hover-image-effect"><img src="https://via.placeholder.com/200x100" class="transition-all w-auto hover-image-effect h-auto rounded-lg shadow-md" alt="Pickup 1"></a></li>
+                                            <li><a href="#" class="block hover-image-effect"><img src="https://via.placeholder.com/200x100" class="transition-all w-auto hover-image-effect h-auto rounded-lg shadow-md" alt="Pickup 2"></a></li>
+                                            <li><a href="#" class="block hover-image-effect"><img src="https://via.placeholder.com/200x100" class="transition-all w-auto hover-image-effect h-auto rounded-lg shadow-md" alt="Pickup 3"></a></li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-lg font-semibold mb-2">Pickups Column 2</h3>
+                                        <ul class="space-y-2">
+                                            <li><a href="#" class="block hover-image-effect"><img src="https://via.placeholder.com/200x100" class="transition-all w-auto hover-image-effect h-auto rounded-lg shadow-md" alt="Pickup 4"></a></li>
+                                            <li><a href="#" class="block hover-image-effect"><img src="https://via.placeholder.com/200x100" class="transition-all w-auto hover-image-effect h-auto rounded-lg shadow-md" alt="Pickup 5"></a></li>
+                                            <li><a href="#" class="block hover-image-effect"><img src="https://via.placeholder.com/200x100" class="transition-all w-auto hover-image-effect h-auto rounded-lg shadow-md" alt="Pickup 6"></a></li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-lg font-semibold mb-2">Pickups Column 3</h3>
+                                        <ul class="space-y-2">
+                                            <li><a href="#" class="block hover-image-effect"><img src="https://via.placeholder.com/200x100" class="transition-all w-auto hover-image-effect h-auto rounded-lg shadow-md" alt="Pickup 7"></a></li>
+                                            <li><a href="#" class="block hover-image-effect"><img src="https://via.placeholder.com/200x100" class="transition-all w-auto hover-image-effect h-auto rounded-lg shadow-md" alt="Pickup 8"></a></li>
+                                            <li><a href="#" class="block hover-image-effect"><img src="https://via.placeholder.com/200x100" class="transition-all w-auto hover-image-effect h-auto rounded-lg shadow-md" alt="Pickup 9"></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="trucks" class="tab-content hidden fade-enter-active">
+                                <div class="grid grid-cols-3 gap-4">
+                                    <div>
+                                        <h3 class="text-lg font-semibold mb-2">Trucks Column 1</h3>
+                                        <ul class="space-y-2">
+                                            <li><a href="#" class="block hover-image-effect"><img src="https://via.placeholder.com/200x100" class="transition-all w-auto hover-image-effect h-auto rounded-lg shadow-md" alt="Truck 1"></a></li>
+                                            <li><a href="#" class="block hover-image-effect"><img src="https://via.placeholder.com/200x100" class="transition-all w-auto hover-image-effect h-auto rounded-lg shadow-md" alt="Truck 2"></a></li>
+                                            <li><a href="#" class="block hover-image-effect"><img src="https://via.placeholder.com/200x100" class="transition-all w-auto hover-image-effect h-auto rounded-lg shadow-md" alt="Truck 3"></a></li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-lg font-semibold mb-2">Trucks Column 2</h3>
+                                        <ul class="space-y-2">
+                                            <li><a href="#" class="block hover-image-effect"><img src="https://via.placeholder.com/200x100" class="transition-all w-auto hover-image-effect h-auto rounded-lg shadow-md" alt="Truck 4"></a></li>
+                                            <li><a href="#" class="block hover-image-effect"><img src="https://via.placeholder.com/200x100" class="transition-all w-auto hover-image-effect h-auto rounded-lg shadow-md" alt="Truck 5"></a></li>
+                                            <li><a href="#" class="block hover-image-effect"><img src="https://via.placeholder.com/200x100" class="transition-all w-auto hover-image-effect h-auto rounded-lg shadow-md" alt="Truck 6"></a></li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-lg font-semibold mb-2">Trucks Column 3</h3>
+                                        <ul class="space-y-2">
+                                            <li><a href="#" class="block hover-image-effect"><img src="https://via.placeholder.com/200x100" class="transition-all w-auto hover-image-effect h-auto rounded-lg shadow-md" alt="Truck 7"></a></li>
+                                            <li><a href="#" class="block hover-image-effect"><img src="https://via.placeholder.com/200x100" class="transition-all w-auto hover-image-effect h-auto rounded-lg shadow-md" alt="Truck 8"></a></li>
+                                            <li><a href="#" class="block hover-image-effect"><img src="https://via.placeholder.com/200x100" class="transition-all w-auto hover-image-effect h-auto rounded-lg shadow-md" alt="Truck 9"></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const dropdownButton = document.getElementById('dropdownButton');
+            const megamenu = document.getElementById('megamenu');
+            const dropdownArrow = document.getElementById('dropdownArrow');
+            const tabLinks = document.querySelectorAll('.tab-link');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            dropdownButton.addEventListener('click', function () {
+                megamenu.classList.toggle('hidden');
+                if (megamenu.classList.contains('hidden')) {
+                    megamenu.classList.remove('max-h-96');
+                    megamenu.classList.add('max-h-0');
+                    dropdownArrow.classList.remove('rotate-180');
+                } else {
+                    megamenu.classList.remove('max-h-0');
+                    megamenu.classList.add('max-h-96');
+                    dropdownArrow.classList.add('rotate-180');
+                }
+            });
+
+            tabLinks.forEach(link => {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    tabLinks.forEach(link => link.classList.remove('text-blue-800', 'font-bold', 'active'));
+                    tabContents.forEach(content => {
+                        content.classList.add('fade-leave-to');
+                        setTimeout(() => content.classList.add('hidden'), 150);
+                    });
+
+                    link.classList.add('text-blue-800', 'font-bold', 'active');
+                    const target = document.querySelector(link.getAttribute('href'));
+                    setTimeout(() => {
+                        target.classList.remove('hidden', 'fade-leave-to');
+                        target.classList.add('fade-enter');
+                        setTimeout(() => target.classList.remove('fade-enter'), 150);
+                    }, 150);
+                });
+            });
+
+            // Activate the first tab by default
+            tabLinks[0].classList.add('text-blue-800', 'font-bold', 'active');
+            tabContents[0].classList.remove('hidden');
+        });
+    </script>
+</body>
+
+</html>
