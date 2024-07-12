@@ -113,7 +113,7 @@ body {
   flex: 0 0 auto;
 }
 .container {
-  max-width: 1300px;
+  max-width: 1440px;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -218,6 +218,7 @@ body {
   }
 }
 .section {
+  margin-bottom: 5rem;
   padding: 7rem 0 0;
 }
 .skeleton {
@@ -789,8 +790,8 @@ body {
     padding: 1rem 1.2rem;
   }
 }
-.about {
-  margin-bottom: 1rem;
+.services, .about {
+  margin-top: 12rem;
 }
 .about__title {
   text-align: center;
@@ -929,6 +930,10 @@ body {
 }
 
 /*========== SERVICES ==========*/
+.container .services__container{
+  max-width: 1400px; 
+}
+
 .services__container{
   row-gap: 2.5rem;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -941,23 +946,23 @@ body {
   text-align: center;
   border-right: solid .5px #d8d8d8;
   align-content: center;
+  padding-right: 15px;
 }
 
 .services__content:last-child{
   border-right: none;
+  padding-right: 0;
 }
 
 .services__img{
-  width: 64px;
-  height: 64px;
-  fill: #eb0a1e;
+  width: 80px;
+  height: 80px;
   margin-bottom: 1rem;
 }
 
 .services__title{
   font-size: 2.4rem;
   color: black;
-  margin-bottom: 1rem;
   font-family: 'Toyota-Type-Book', sans-serif;
 }
 
@@ -969,3 +974,4 @@ body {
   display: grid;
   gap: 1.5rem;
 }
+
