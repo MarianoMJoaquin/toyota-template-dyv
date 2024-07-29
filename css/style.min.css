@@ -671,7 +671,7 @@ body {
 .catalog__items {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr) [3];
+  -ms-grid-columns: (1fr) [5];
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1.5rem;
 }
@@ -797,6 +797,13 @@ body {
   text-align: center;
   margin-bottom: 5rem;
 }
+
+.about__span{
+  font-size: 1.5rem;
+  color: #000;
+  font-family: 'Toyota-Type-Semibold', sans-serif;
+}
+
 .about__inner {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -808,9 +815,13 @@ body {
   -ms-flex-pack: justify;
   justify-content: space-between;
   gap: 3rem;
+  padding: 10rem;
+  margin: 0 20rem;
 }
 .about__inner_company {
+  background-color: #fafafa;
   margin-bottom: 12rem;
+  border-radius: 15px;
 }
 .about__inner_leadership .about__info {
   -webkit-box-ordinal-group: 2;
@@ -847,12 +858,15 @@ body {
 
 .about__img-wrapper {
   width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.about__img-wrapper img {
-  width: 100%;
-  height: auto;
+
+.about__img-wrapper iframe{
   border-radius: 2rem;
 }
+
 @media (max-width: 1024px) {
   .about__inner {
     display: block;
@@ -981,3 +995,4 @@ body {
   gap: 1.5rem;
 }
 
+/*Nuevo header*/
