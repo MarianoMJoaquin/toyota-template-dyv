@@ -469,7 +469,7 @@ body {
   font-family: 'Toyota-Type-Book', sans-serif;
 }
 .slider__item-btn {
-  bottom: 2.5rem;
+  bottom: 3.5rem;
 }
 .slider__item-bg {
   position: relative;
@@ -832,7 +832,7 @@ body {
   /*margin: 0 20rem;*/
 }
 .about__inner_company {
-  background-color: #fafafa;
+  background-color: #f5f5f5;
   margin-bottom: 12rem;
   border-radius: 15px;
 }
@@ -932,18 +932,32 @@ body {
   -ms-flex-pack: justify;
   justify-content: space-between;
   margin-bottom: 2rem;
-  border-bottom: solid 1px #d8d8d8;
+  
 }
 .footer__center{
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0 1.5rem;
+  justify-content: space-between;
+  gap: 0 3rem;
   margin-bottom: 2rem;
 }
-.footer__bottom{
-  border-top: solid 1px #d8d8d8;
+.footer__title{
+  font-size: 2rem;
+  font-family: 'Toyota-Type-Semibold', sans-serif;
 }
+.footer__lit{
+  margin-top: 1rem;
+}
+
+.footer__text{
+  padding-bottom: 10px;
+}
+
+.footer__item{
+  padding: 10px 0;
+}
+
+
+
 .social__list{
   display: -webkit-box;
   display: -ms-flexbox;
