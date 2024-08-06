@@ -17,8 +17,9 @@
 
   <!--======================= STYLE =======================-->
   <link rel="stylesheet" href="css/style.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
 
 </head>
 
@@ -26,8 +27,8 @@
   <div class="wrapper">
     <!--======================= HEADER =======================-->
     <header class="header">
-      <div class="container">
-        <div class="topbar__inner">
+      <!--<div class="container">
+        <!--<div class="topbar__inner">
           <div class="topbar__left">
             <a class="topbar__link" href="#!">
               <i class="ri-phone-fill"></i>
@@ -80,13 +81,158 @@
               <li class="menu__item">
                 <a class="menu__link link" href="#footer">Empresa</a>
               </li>
+              <li class="menu__item">
+                <a class="menu__link link" href="#footer">Contacto</a>
+              </li>
             </ul>
           </nav>
           <button class="menu__btn">
             <span></span>
           </button>
         </div>
-      </div>
+      </div>-->
+      
+      <!--<button class="menu__btn">
+        <span></span>
+      </button>-->
+      <nav class="nav container">
+                <div class="nav__data">
+                    <a href="/" class="nav__logo">
+                        <img src="/images/logo-dyv.6982403.png" alt="">
+                    </a>
+
+                    <div class="nav__toggle" id="nav-toggle">
+                        <i class="ri-menu-3-line nav__toggle-menu"></i>
+                        <i class="ri-close-line nav__toggle-close"></i>
+                    </div>
+                </div>
+
+                <!--=============== NAV MENU ===============-->
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="dropdown__item">
+                            <a href="#" class="nav__link dropdown__button">
+                                Modelos
+                                <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                            </a>
+                            <div class="dropdown__container">
+                                <div class="dropdown__content">
+                                    <div class="dropdown__group">
+                                        <div class="dropdown__icon">
+                                            <i class="ri-flashlight-line"></i>
+                                        </div>
+
+                                        <span class="dropdown__title">Título 1</span>
+
+                                        <ul class="dropdown__list">
+                                            <li><a href="#" class="dropdown__link">Opción 1</a></li>
+                                            <li><a href="#" class="dropdown__link">Opción 2</a></li>
+                                            <li><a href="#" class="dropdown__link">Opción 3</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="dropdown__group">
+                                        <div class="dropdown__icon">
+                                            <i class="ri-heart-line"></i>
+                                        </div>
+
+                                        <span class="dropdown__title">Titulo 2</span>
+
+                                        <ul class="dropdown__list">
+                                            <li><a href="#" class="dropdown__link">Opción 1</a></li>
+                                            <li><a href="#" class="dropdown__link">Opción 2</a></li>
+                                            <li><a href="#" class="dropdown__link">Opción 3</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="dropdown__group">
+                                        <div class="dropdown__icon">
+                                            <i class="ri-book-line"></i>
+                                        </div>
+
+                                        <span class="dropdown__title">Título 3</span>
+
+                                        <ul class="dropdown__list">
+                                            <li><a href="#" class="dropdown__link">Opción 1</a></li>
+                                            <li><a href="#" class="dropdown__link">Opción 2</a></li>
+                                            <li><a href="#" class="dropdown__link">Opción 3</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="dropdown__group">
+                                        <div class="dropdown__icon">
+                                            <i class="ri-book-line"></i>
+                                        </div>
+
+                                        <span class="dropdown__title">Título 3</span>
+
+                                        <ul class="dropdown__list">
+                                            <li><a href="#" class="dropdown__link">Opción 1</a></li>
+                                            <li><a href="#" class="dropdown__link">Opción 2</a></li>
+                                            <li><a href="#" class="dropdown__link">Opción 3</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="dropdown__item">
+                            <a href="#" class="nav__link dropdown__button">
+                                Modelos 2
+                                <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                            </a>
+                            
+                            <div class="dropdown__container">
+                                <div class="dropdown__content">
+                                    <div class="dropdown__group">
+                                        <div class="dropdown__icon">
+                                            <i class="ri-code-line"></i>
+                                        </div>
+
+                                        <span class="dropdown__title">Titulo 4</span>
+
+                                        <ul class="dropdown__list">
+                                            <li><a href="#" class="dropdown__link">Opcion 1</a></li>
+                                            <li><a href="#" class="dropdown__link">Opcion 2</a></li>
+                                            <li><a href="#" class="dropdown__link">Opcion 3</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="dropdown__group">
+                                        <div class="dropdown__icon">
+                                            <i class="ri-attachment-2"></i>
+                                        </div>
+
+                                        <span class="dropdown__title">Titulo 5</span>
+
+                                        <ul class="dropdown__list">
+                                            <li><a href="#" class="dropdown__link">Opcion 1</a></li>
+                                            <li><a href="#" class="dropdown__link">Opcion 2</a></li>
+                                            <li><a href="#" class="dropdown__link">Opcion 3</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="dropdown__group">
+                                        <div class="dropdown__icon">
+                                            <i class="ri-pencil-fill"></i>
+                                        </div>
+
+                                        <span class="dropdown__title">Titulo 6</span>
+
+                                        <ul class="dropdown__list">
+                                            <li><a href="#" class="dropdown__link">opción 1</a></li>
+                                            <li><a href="#" class="dropdown__link">Opción 2</a></li>
+                                            <li><a href="#" class="dropdown__link">Opcion 3</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        <li><a href="" class="nav__link">Cosa 1</a></li>
+                        <li><a href="" class="nav__link">Cosa 2</a></li>
+                    </ul>
+                </div>
+            </nav>
     </header>
 
     <main class="main">
@@ -160,27 +306,10 @@
                   </picture>
                 </a>
               </div>
-              <div class="slider__item">
-                <h1 class="slider__item-title">
-                  Toyota Usados
-                  <span>Comprá o vendé tu auto con la confianza Toyota</span>
-                </h1>
-                <button class="slider__item-btn btn">
-                  Explorar Camry 2025
-                </button>
-                <a class="slider__item-bg" href="#!">
-                  <picture>
-                    <source srcset="images/home-3-3.jpg" media="(max-width: 500px)" />
-                    <source srcset="images/home-3-2.jpg" media="(max-width: 768px)" />
-                    <img class="slider__item-img" src="images/usados.jpeg" alt="Rav4" />
-                  </picture>
-                </a>
-              </div>
             </div>
           </div>
           <div class="slider__nav">
             <button class="slider__nav-btn slider__nav-btn_active"></button>
-            <button class="slider__nav-btn"></button>
             <button class="slider__nav-btn"></button>
             <button class="slider__nav-btn"></button>
             <button class="slider__nav-btn"></button>
@@ -256,6 +385,8 @@
           </div>
         </div>
       </section>
+
+    
 
       <section class="services section">
         <div class="container">
@@ -510,7 +641,7 @@
                 </p>-->
             </div>
 
-            <div class="services__content">
+            <!--<div class="services__content">
               <svg class="services__img" id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 313.81 313.19">
                 <defs>
@@ -561,8 +692,8 @@
               <!--<p class="services__description">
                   We offer our clients excellent quality services for many
                   years, with the best and delicious food in the city.
-                </p>-->
-            </div>
+                </p>
+            </div>-->
 
             <div class="services__content">
               <svg class="services__img" id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg"
@@ -589,10 +720,9 @@
           </div>
         </div>
       </section>
-      <!--======================= ABOUT =======================-->
       
-
-
+      
+      <!--======================= ABOUT =======================-->
       <section class="about section">
         <div class="container">
           <!--<h1 class="about__title heading-1">
@@ -626,38 +756,137 @@
 
           <div class="about__inner about__inner_leadership">
             <div class="about__info">
-              <h5 class="about__subtitle">Our Leadership</h5>
+              <h5 class="about__span">Pushing the limits for better</h5>
+              <h5 class="about__subtitle">Toyota Gazoo Racing Argentina</h5>
               <div class="about__text">
-                We build cars and trucks that help you and your family go
-                places reliably and safely. And it's our people who power
-                those vehicles. Meet the team leaders who live and work in the
-                communities where you do.
+                Toyota Gazoo Racing representa el compromiso de Toyota de superar todos los límites para crear vehículos cada vez mejores.
               </div>
-              <a class="about__link" href="#!"> Learn More </a>
+              <a class="about__link__gr" href="#!"> Conocer más </a>
             </div>
             <div class="about__img-wrapper">
-              <img class="about__img" src="images/about-2.jpg" alt="Leadership" />
+              <img class="about__img" src="images/gr.jpg" alt="Leadership" />
             </div>
           </div>
 
           <div class="about__inner about__inner_company">
             <div class="about__info">
-              <h5 class="about__subtitle">About Companyy</h5>
+              <h5 class="about__span">Tené siempre un Toyota</h5>
+              <h5 class="about__subtitle">Kinto Share</h5>
               <div class="about__text">
-                Toyota Motor Corporation is a Japanese multinational
-                automotive manufacturer headquartered in Toyota City, Aichi,
-                Japan. It was founded by Kiichiro Toyoda and incorporated on
-                August 28, 1937.
+                La solución de movilidad más conveniente, inteligente y confiable que se adapta a tus necesidades. Alquila un Toyota por el tiempo que quieras y en el lugar que más te convenga.
               </div>
-              <a class="about__link" href="#!"> Learn More </a>
+              <a class="about__link" href="#!"> Conocer más </a>
             </div>
             <div class="about__img-wrapper">
-              <img class="about__img" src="images/about-1.jpg" alt="Toyota" />
+              <img class="about__img" src="images/kinto.webp" alt="Toyota" />
             </div>
           </div>
         </div>
       </section>
       <!-- Slider main container -->
+
+      <!--======================= NOVEDADES =======================-->
+      <h1 class="about__title heading-1">Novedades</h1>
+      <section class="section cards__container">
+        
+        <div class="card__container swiper">
+          <div class="card__content">
+             <div class="swiper-wrapper">
+                <article class="card__article swiper-slide">
+                   <div class="card__image">
+                      <img src="images/plan-flex.jpg" alt="image" class="card__img">
+                      <div class="card__shadow"></div>
+                   </div>
+    
+                   <div class="card__data">
+                      <h3 class="card__name">Noticia 1</h3>
+                      <p class="card__description">
+                         Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                      </p>
+    
+                      <a href="#" class="card__button">Leer más</a>
+                   </div>
+                </article>
+    
+                <article class="card__article swiper-slide">
+                   <div class="card__image">
+                      <img src="images/bridgestone.jpg" alt="image" class="card__img">
+                      <div class="card__shadow"></div>
+                   </div>
+    
+                   <div class="card__data">
+                      <h3 class="card__name">Noticia 2</h3>
+                      <p class="card__description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                      </p>
+    
+                      <a href="#" class="card__button">Leer más</a>
+                   </div>
+                </article>
+    
+                <article class="card__article swiper-slide">
+                   <div class="card__image">
+                      <img src="images/plan-flex.jpg" alt="image" class="card__img">
+                      <div class="card__shadow"></div>
+                   </div>
+    
+                   <div class="card__data">
+                      <h3 class="card__name">Noticia 3</h3>
+                      <p class="card__description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                      </p>
+    
+                      <a href="#" class="card__button">Leer más</a>
+                   </div>
+                </article>
+    
+                <article class="card__article swiper-slide">
+                   <div class="card__image">
+                      <img src="images/bridgestone.jpg" alt="image" class="card__img">
+                      <div class="card__shadow"></div>
+                   </div>
+    
+                   <div class="card__data">
+                      <h3 class="card__name">Noticia 4</h3>
+                      <p class="card__description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                      </p>
+    
+                      <a href="#" class="card__button">Leer más</a>
+                   </div>
+                </article>
+
+                <article class="card__article swiper-slide">
+                   <div class="card__image">
+                      <img src="images/plan-flex.jpg" alt="image" class="card__img">
+                      <div class="card__shadow"></div>
+                   </div>
+    
+                   <div class="card__data">
+                      <h3 class="card__name">Noticia 5</h3>
+                      <p class="card__description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                      </p>
+    
+                      <a href="#" class="card__button">Leer más</a>
+                   </div>
+                </article>
+             </div>
+          </div>
+
+          <!-- Navigation buttons -->
+          <div class="swiper-button-next">
+             <i class="ri-arrow-right-s-line"></i>
+          </div>
+          
+          <div class="swiper-button-prev">
+             <i class="ri-arrow-left-s-line"></i>
+          </div>
+
+          <!-- Pagination -->
+          <div class="swiper-pagination"></div>
+        </div>
+      </section> 
     </main>
 
     <!--======================= FOOTER =======================-->
@@ -669,17 +898,17 @@
           </a>
           <ul class="social__list">
             <li class="social__item">
-              <a class="social__link" href="https://github.com/">
+              <a class="social__link" href="https://instagram.com/toyotaderkayvargas" target="_blank">
                 <i class="ri-instagram-line"></i>
               </a>
             </li>
             <li class="social__item">
-              <a class="social__link" href="https://github.com/">
+              <a class="social__link" href="https://facebook.com/derkayvargas" target="_blank">
                 <i class="ri-facebook-circle-fill"></i>
               </a>
             </li>
             <li class="social__item">
-              <a class="social__link" href="https://github.com/">
+              <a class="social__link" href="https://youtube.com/@derkayvargassa3733" target="_blank">
                 <i class="ri-youtube-fill"></i>
               </a>
             </li>
@@ -775,29 +1004,8 @@
     </footer>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script>
-    var swiper = new Swiper('.swiper', {
-      slidesPerView: 1,
-      spaceBetween: 10,
-      loop: true,
-      autoplay: {
-        delay: 5000,
-        disableOnInteraction: false,
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      scrollbar: {
-        el: '.swiper-scrollbar',
-      },
-    });
-  </script>
+  <script src="js/swiper-bundle.min.js"></script>
+  
   <script src="js/main.min.js"></script>
 
 </body>
